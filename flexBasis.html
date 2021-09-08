@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Foundations - flex basis</title>
+
+	<style>
+		.flex-container {
+			max-width: 500px;
+			border: 1px solid black;
+			display: flex;
+		}
+
+		.item {
+			background-color: blueviolet;
+			color: #fff;
+			text-align: center;
+			margin: 2px;
+		}
+
+		.b-auto {
+			flex-basis: auto;
+		}
+
+		.fg-0 {
+			flex-grow: 0;
+		}
+
+		.fg-1 {
+			flex-grow: 1;
+		}
+
+		.fg-2 {
+			flex-grow: 2;
+		}
+
+		.f-wrap {
+			flex-wrap: wrap;
+		}
+
+		.fb-100w {
+			flex-basis: 100px;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<p>flex-basis: auto</p>
+	<div class="flex-container f-wrap">
+		<div class="item b-auto fg-1">A</div>
+		<div class="item b-auto fg-2">BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB</div>
+		<div class="item b-auto fg-1">C</div>
+		<div class="item b-auto fg-1">DEF</div>
+	</div>
+
+	<p>flex-basis: 100px</p>
+	<div class="flex-container f-wrap">
+		<div class="item fb-100w fg-1">A</div>
+		<div class="item fb-100w ">BBBBBBBBB</div>
+		<div class="item fb-100w ">C</div>
+		<div class="item fb-100w ">DEF</div>
+	</div>
+
+</body>
+</html>
