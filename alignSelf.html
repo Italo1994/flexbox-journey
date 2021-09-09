@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Foundations - align self</title>
+
+	<style>
+
+		.flex-container {
+			display: flex;
+			max-width: 300px;
+			border: 1px solid black;
+		}
+
+		.align-container {
+			align-items: center;
+		}
+
+		.item {
+			background-color: orangered;
+			color: white;
+			text-align: center;
+			margin: 5px;
+			font-size: 24px;
+		}
+
+		.center {
+			align-self: center;
+		}
+
+		.start {
+			align-self: flex-start;
+		}
+
+		.end {
+			align-self: flex-end;
+		}
+
+		.baseline {
+			align-self: baseline;
+		}
+
+		.stretch {
+			align-self: stretch;
+		}
+
+		.auto {
+			align-self: auto;
+		}
+
+		.direction {
+			flex-direction: column;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h1>row</h1>
+	<section class="flex-container align-container">
+		<div class="item">AAA</div>
+		<div class="item">1234</div>
+		<div class="item">Lorem Ipsum is therefore always free from repetition.</div>
+		<div class="item">Item 4</div>
+	</section>
+
+	<section class="flex-container">
+		<div class="item center">AAA</div>
+		<div class="item start">1234</div>
+		<div class="item stretch">Lorem Ipsum is therefore always free from repetition.</div>
+		<div class="item end">Item 4</div>
+	</section>
+
+	<h1>column</h1>
+	<section class="flex-container align-container direction">
+		<div class="item">AAA</div>
+		<div class="item">1234</div>
+		<div class="item">Lorem Ipsum is therefore always free from repetition.</div>
+		<div class="item">Item 4</div>
+	</section>
+
+	<section class="flex-container">
+		<div class="item center">AAA</div>
+		<div class="item start">1234</div>
+		<div class="item stretch">Lorem Ipsum is therefore always free from repetition.</div>
+		<div class="item end">Item 4</div>
+	</section>
+
+</body>
+</html>
